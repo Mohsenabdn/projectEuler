@@ -5,7 +5,7 @@ import time as t
 start = t.time()
 
 # Input : An integer number
-# Output : A bool type( True: input is palindrome, False: input is not palindrome
+# Output : A bool type (True: input is palindrome, False: input is not palindrome)
 
 def isPalindrome(num):
     digits = []
