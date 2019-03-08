@@ -1,5 +1,5 @@
 # Finding 13 adjacent numbers in bigNum (a 1000-digit number) having the greatest product.
-# 1000-digit number is saved in a text file.
+# 1000-digit number has been saved in a text file.
 
 import time as t
 
