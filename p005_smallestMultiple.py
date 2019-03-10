@@ -1,6 +1,6 @@
 # Finding the smallest positive number that is evenly divisible by all the numbers from 1 to 20
 
-from problem3 import primeFinder
+from p003_largestPrimeFactor import primeFinder
 import numpy as np
 import time as t
 
