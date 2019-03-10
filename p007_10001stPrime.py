@@ -1,6 +1,6 @@
 # Finding the 10,001st prime number
 
-from problem3 import primeFinder
+from p003_largestPrimeFactor import primeFinder
 import numpy as np
 import time as t
 
