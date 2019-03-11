@@ -5,14 +5,25 @@ import time as t
 
 start = t.time()
 
-def sumSquares(bound):
+# Input : A bound number
+# Output : Sum of square of numbers smaller than input
+
+
+def sum_squares(bound):
     return int((bound*(bound+1)*(2*bound+1))/6)
-def sumNums(bound):
+
+
+# Input : A bound number
+# Output : Sum of numbers smaller than input
+
+
+def sum_nums(bound):
     return int((bound*(bound+1))/2)
 
+
 if __name__ == '__main__':
-    bound = 100
-    diff = sumNums(bound)**2 - sumSquares(bound)
+    limit = 100
+    diff = sum_nums(limit)**2 - sum_squares(limit)
     print(diff)
 
     end = t.time()
