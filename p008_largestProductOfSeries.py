@@ -16,12 +16,13 @@ def product_adjacent(big_num, num_adj):
     return prod
 
 
-file = open('1000DigitNumber.txt')
-bigNum = file.read()
-file.close()
-bigNum = bigNum.replace('\n', '')
+if __name__ == '__main__:
+    file = open('1000DigitNumber.txt')
+    bigNum = file.read()
+    file.close()
+    bigNum = bigNum.replace('\n', '')
 
-print(np.max(product_adjacent(bigNum, 13)))
+    print(np.max(product_adjacent(bigNum, 13)))
 
-end = t.time()
-print('Run time : ' + str(end-start))
+    end = t.time()
+    print('Run time : ' + str(end-start))
