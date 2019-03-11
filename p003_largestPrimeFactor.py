@@ -5,11 +5,11 @@ import time as t
 
 start = t.time()
 
-# Input : A bound number
-# Output : A bool list of prime numbers below bound (True: is prime, False: is not prime)
-
 
 def prime_finder(bound):
+    # Input : A bound number
+    # Output : A bool list of prime numbers below bound (True: is prime, False: is not prime)
+    
     prime_nums = [True]*(bound+1)
     prime_nums[0] = False
     prime_nums[1] = False
