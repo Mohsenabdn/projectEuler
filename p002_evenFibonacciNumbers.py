@@ -4,11 +4,11 @@ import time as t
 
 start = t.time()
 
-# Input : A bound number
-# Output : Sum of even-valued Fibonacci terms less than bound
-
 
 def even_val_fibonacci_sum(bound):
+    # Input : A bound number
+    # Output : Sum of even-valued Fibonacci terms less than bound
+    
     num1 = 3
     num2 = 5
     num3 = num1+num2
