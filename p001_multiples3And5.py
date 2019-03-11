@@ -1,0 +1,26 @@
+# Computing sum of all the multiples 3 or 5 below 1000
+
+import time as t
+
+start = t.time()
+
+# Input : A bound and two prime numbers
+# Output : Sum of multiples of prime1 or prime2 less than bound
+
+
+def multiple_sum(bound, prime1, prime2):
+    s = 0
+    for i in range(1, int((bound-1)/prime1)+1):
+        s += i*prime1
+    for i in range(1, int((bound-1)/prime2)+1):
+        s += i*prime2
+    for i in range(1, int((bound-1)/(prime1*prime2))+1):
+        s -= i*prime1*prime2
+    return s
+
+
+if __name__ == '__main__':
+    print(multiple_sum(1000, 3, 5))
+
+    end = t.time()
+    print("Run time : " + str(end-start))
