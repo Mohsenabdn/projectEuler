@@ -5,19 +5,18 @@ import time as t
 
 start = t.time()
 
-# Input : A bound number
-# Output : Sum of square of numbers smaller than input
-
 
 def sum_squares(bound):
+    # Input : A bound number
+    # Output : Sum of square of numbers smaller than input
+    
     return int((bound*(bound+1)*(2*bound+1))/6)
 
 
-# Input : A bound number
-# Output : Sum of numbers smaller than input
-
-
 def sum_nums(bound):
+    # Input : A bound number
+    # Output : Sum of numbers smaller than input
+    
     return int((bound*(bound+1))/2)
 
 
