@@ -1,14 +1,15 @@
 # Finding the largest palindrome number made by product of two 3-digits numbers
 
+import numpy as np
 import time as t
 
 start = t.time()
 
-# Input : An integer number
-# Output : A bool type (True: input is palindrome, False: input is not palindrome)
-
 
 def is_palindrome(num):
+    # Input : An integer number
+    # Output : A bool type (True: input is palindrome, False: input is not palindrome)
+
     digits = []
     while num:
         digits.append(num % 10)
@@ -20,12 +21,8 @@ def is_palindrome(num):
 
 
 if __name__ == '__main__':
-    multiples = []
-    for k in range(100, 1000):
-        for j in range(k, 1000):
-            multiples.append(k*j)
-
-    multiples.sort(reverse=True)
+    multiples = np.array([k*j for k in range(100, 1000) for j in range(k, 1000)])
+    multiples[::-1].sort()
 
     for j in range(len(multiples)):
         if is_palindrome(multiples[j]):
