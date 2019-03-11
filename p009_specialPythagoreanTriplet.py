@@ -8,7 +8,7 @@ start = t.time()
 pythTripSum = 1000
 isPythTrip = False
 
-for num1 in range(1,int(pythTripSum/3)):
+for num1 in range(1, int(pythTripSum/3)):
     for num2 in range(num1+1, int((pythTripSum-num1)/2)):
         if (pythTripSum-num1-num2)**2 == num1**2 + num2**2:
             isPythTrip = True
