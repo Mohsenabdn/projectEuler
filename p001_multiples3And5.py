@@ -4,11 +4,11 @@ import time as t
 
 start = t.time()
 
-# Input : A bound and two prime numbers
-# Output : Sum of multiples of prime1 or prime2 less than bound
-
 
 def multiple_sum(bound, prime1, prime2):
+    # Input : A bound and two prime numbers
+    # Output : Sum of multiples of prime1 or prime2 less than bound
+    
     s = 0
     for i in range(1, int((bound-1)/prime1)+1):
         s += i*prime1
