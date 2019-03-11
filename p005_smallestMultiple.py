@@ -12,7 +12,7 @@ primes = np.where(primeFinder(topNum))[0]
 
 for i in range(len(primes)):
     k = 1
-    while(primes[i]**k < topNum):
+    while primes[i]**k < topNum:
         smallest *= primes[i]
         k += 1
 
