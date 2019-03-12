@@ -7,26 +7,31 @@ import time as t
 
 start = t.time()
 
-grid = np.genfromtxt('20By20Grid.txt', dtype='int8')
-gSize = grid.shape[0]
-numAdj = 4
 
-UD = np.array([np.prod(grid[i:i+numAdj, j]) for j in range(gSize)\
-               for i in range(gSize-numAdj+1)])
+def all_direction_products(g, num_adj):
+    # Input : A square grid and number of adjacent numbers
+    # Output : Four arrays consisting products of adjacent numbers in all directions
 
-LR = np.array([np.prod(grid[i, j:j+numAdj]) for i in range(gSize)\
-               for j in range(gSize-numAdj+1)])
+    g_size = g.shape[0]
+    row_prods = np.array([np.prod(g[i:i+num_adj, j]) for j in range(g_size)
+                          for i in range(g_size-num_adj+1)])
+    col_prods = np.array([np.prod(g[i, j:j+num_adj]) for i in range(g_size)
+                          for j in range(g_size-num_adj+1)])
+    main_diag_prods = np.array([np.prod(np.diagonal(g, offset=i)[j:j+numAdj])
+                                for i in range(-(g_size-num_adj), g_size-num_adj+1)
+                                for j in range((g_size-num_adj)-np.absolute(i)+1)])
+    oppos_diag_prods = np.array([np.prod(np.diagonal(np.rot90(g), offset=i)[j:j+numAdj])
+                                 for i in range(-(g_size-num_adj), g_size-num_adj+1)
+                                 for j in range((g_size-num_adj)-np.absolute(i)+1)])
+    return row_prods, col_prods, main_diag_prods, oppos_diag_prods
 
-mainDiag = np.array([np.prod(np.diagonal(grid, offset=i)[j:j+numAdj])\
-                     for i in range(-(gSize-numAdj), gSize-numAdj+1)\
-                     for j in range((gSize-numAdj)-np.absolute(i)+1)])
 
-opposDiag = np.array([np.prod(np.diagonal(np.rot90(grid), offset=i)[j:j+numAdj])\
-                      for i in range(-(gSize-numAdj), gSize-numAdj+1)\
-                      for j in range((gSize-numAdj)-np.absolute(i)+1)])
-
-maximums = np.array([np.max(UD), np.max(LR), np.max(mainDiag), np.max(opposDiag)])
-print(np.max(maximums))
-
-end = t.time()
-print('Run time : ' + str(end-start))
+if __name__ == '__main__':
+    grid = np.genfromtxt('20By20Grid.txt', dtype='int8')
+    numAdj = 4
+    rows, cols, mainDiags, opposDiags = all_direction_products(grid, numAdj)
+    maximums = [np.max(rows), np.max(cols), np.max(mainDiags), np.max(opposDiags)]
+    print(max(maximums))
+    
+    end = t.time()
+    print('Run time : ' + str(end-start))
