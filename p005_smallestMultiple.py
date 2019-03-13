@@ -10,11 +10,11 @@ topNum = 20
 smallest = 1
 primes = np.where(prime_finder(topNum))[0]
 
-for i in range(len(primes)):
-    k = 1
-    while primes[i]**k < topNum:
-        smallest *= primes[i]
-        k += 1
+for p in primes:
+    i = 1
+    while p**i < topNum:
+        smallest *= p
+        i += 1
 
 print(smallest)
 
