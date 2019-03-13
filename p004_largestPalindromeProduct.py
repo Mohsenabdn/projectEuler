@@ -24,9 +24,9 @@ if __name__ == '__main__':
     multiples = np.array([k*j for k in range(100, 1000) for j in range(k, 1000)])
     multiples[::-1].sort()
 
-    for j in range(len(multiples)):
-        if is_palindrome(multiples[j]):
-            print(multiples[j])
+    for j in multiples:
+        if is_palindrome(j):
+            print(j)
             break
 
     end = t.time()
