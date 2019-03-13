@@ -9,15 +9,15 @@ start = t.time()
 def prime_finder(bound):
     # Input : A bound number
     # Output : A bool list of prime numbers below bound (True: is prime, False: is not prime)
-    
+
     prime_nums = [True]*(bound+1)
     prime_nums[0] = False
     prime_nums[1] = False
 
-    for j in range(2, int(np.sqrt(bound))+1):
-        if prime_nums[j]:
-            for k in range(2, int(bound/j)+1):
-                prime_nums[j*k] = False
+    for i in range(2, int(np.sqrt(bound))+1):
+        if prime_nums[i]:
+            for k in range(2, int(bound/i)+1):
+                prime_nums[i*k] = False
     return prime_nums
 
 
@@ -26,10 +26,10 @@ if __name__ == '__main__':
     largestFact = 1
     primes = np.where(prime_finder(int(np.sqrt(num))+1))[0]
 
-    for i in range(len(primes)):
-        while num % primes[i] == 0:
-            num = int(num/primes[i])
-            largestFact = primes[i]
+    for p in primes:
+        while num % p == 0:
+            num = int(num/p)
+            largestFact = p
 
     if num > largestFact:
         largestFact = num
