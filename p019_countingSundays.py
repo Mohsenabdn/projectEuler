@@ -69,3 +69,6 @@ if __name__ == '__main__':
     for y in range(yearInterval[0], yearInterval[1]+1):
         counting += count_first_months(y)
     print(counting)
+    
+    end = t.time()
+    print('Run time : ' + str(end-start))
