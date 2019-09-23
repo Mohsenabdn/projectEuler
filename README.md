@@ -1,6 +1,6 @@
 
 ##############################################################################
 
-ProjectEuler is the python codes of problems in https://projecteuler.net/
+ProjectEuler is the python codes for the problems in https://projecteuler.net/
 
 ##############################################################################
