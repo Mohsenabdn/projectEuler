@@ -14,6 +14,7 @@ def multiple_sum(bound, prime1, prime2):
     s -= sum([i*prime1*prime2 for i in range(1, (bound-1)//(prime1*prime2)+1)])
     return s
 
+
 if __name__ == '__main__':
     print(multiple_sum(1000, 3, 5))
 
