@@ -5,31 +5,25 @@ import time as t
 start = t.time()
 
 
-def even_val_fibonacci_sum(bound):
-    # Input : A bound number
-    # Output : Sum of even-valued Fibonacci terms less than bound
-    
-    num1 = 3
-    num2 = 5
-    num3 = num1+num2
-    s = num3
-
-    while num3 < bound:
-        s += num3
-        num1 = num2
-        num2 = num3
-        num3 = num1+num3
-
-    if num2 % 2 == 0:
-        return int(s/2) + 2
-    elif num1 % 2 == 0:
-        return int((s-num2)/2) + 2
+def fibonacci_sequence(bound):
+    """ Input : A bound value for value of fibonacci numbers
+    Output : The fibonacci sequence whose maximum value is less than bound """
+    fib = [1, 2]
+    if bound == 1: 
+        return []
+    elif bound == 2: 
+        return fib[:1]
+    elif bound == 3: 
+        return fib
     else:
-        return int((s-num2-num1)/2) + 2
+        app = fib.append
+        while fib[-1]+fib[-2] < bound:
+            app(fib[-1]+fib[-2])
+    return fib
 
 
 if __name__ == '__main__':
-    print(even_val_fibonacci_sum(4000000))
-
+    print(sum(fibonacci_sequence(4000000)[1::3]))
+    
     end = t.time()
     print("Run time : " + str(end-start))
