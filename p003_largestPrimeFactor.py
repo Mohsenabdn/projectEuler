@@ -8,7 +8,8 @@ start = t.time()
 
 def prime_finder(bound):
     """ Input : A bound number
-    Output : A bool list of prime numbers below bound (True: is prime, False: is not prime) """
+    Output : A bool list of prime numbers below bound (True: is prime,
+    False: is not prime)"""
 
     prime_nums = [True]*(bound+1)
     prime_nums[0] = False
@@ -37,4 +38,4 @@ if __name__ == '__main__':
 
     end = t.time()
     print('Run time : ' + str(end - start))
-    
+
