@@ -7,8 +7,9 @@ start = t.time()
 
 
 def is_palindrome(num):
-    # Input : An integer number
-    # Output : A bool type (True: input is palindrome, False: input is not palindrome)
+    """ Input : An integer number
+    Output : A bool type (True: input is palindrome, False: input is not
+    palindrome) """
 
     digits = []
     while num:
@@ -21,8 +22,9 @@ def is_palindrome(num):
 
 
 if __name__ == '__main__':
-    multiples = np.array([k*j for k in range(100, 1000) for j in range(k, 1000)])
-    multiples[::-1].sort()
+    prods = (np.reshape(np.arange(100, 1000), (1, 900)) *
+             np.reshape(np.arange(100, 1000), (900, 1)))[np.tril_indices(900)]
+    prods = np.unique(np.sort(prods))[::-1]
 
     for j in multiples:
         if is_palindrome(j):
