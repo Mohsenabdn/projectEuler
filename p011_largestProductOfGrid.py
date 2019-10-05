@@ -27,7 +27,7 @@ def all_direction_products(g, num_adj):
 
 
 if __name__ == '__main__':
-    grid = np.genfromtxt('20By20Grid.txt', dtype='int8')
+    grid = np.genfromtxt('p011_20By20Grid.txt', dtype='int8')
     numAdj = 4
     rows, cols, mainDiags, opposDiags = all_direction_products(grid, numAdj)
     maximums = [np.max(rows), np.max(cols), np.max(mainDiags), np.max(opposDiags)]
