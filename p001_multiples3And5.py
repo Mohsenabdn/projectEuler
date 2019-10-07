@@ -3,8 +3,6 @@
 import numpy as np
 import time as t
 
-start = t.time()
-
 
 def multiple_sum(bound, prime1, prime2):
     """ Input : A bound and two prime numbers 
@@ -18,6 +16,8 @@ def multiple_sum(bound, prime1, prime2):
 
 
 if __name__ == '__main__':
+    start = t.time()
+    
     print(multiple_sum(1000, 3, 5))
 
     end = t.time()
