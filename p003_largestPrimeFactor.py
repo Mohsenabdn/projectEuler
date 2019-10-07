@@ -5,7 +5,7 @@ import time as t
 
 def prime_factors(num):
     """ Input : The positive integer number.
-    Output : The list of prime factors of Input. """
+    Output : The list of prime factors (with repetition) of the Input. """
 
     p_facts = []
     app = p_facts.append
