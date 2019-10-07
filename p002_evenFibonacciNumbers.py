@@ -2,8 +2,6 @@
 
 import time as t
 
-start = t.time()
-
 
 def fibonacci_sequence(bound):
     """ Input : A bound value for value of fibonacci numbers
@@ -23,6 +21,8 @@ def fibonacci_sequence(bound):
 
 
 if __name__ == '__main__':
+    start = t.time()
+    
     print(sum(fibonacci_sequence(4000000)[1::3]))
     
     end = t.time()
