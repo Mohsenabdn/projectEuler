@@ -7,15 +7,15 @@ start = t.time()
 
 
 def sum_squares(bound):
-    # Input : A bound number
-    # Output : Sum of square of numbers smaller than input
+    """ Input : A bound number
+    Output : Sum of square of numbers smaller than input """
     
     return int((bound*(bound+1)*(2*bound+1))/6)
 
 
 def sum_nums(bound):
-    # Input : A bound number
-    # Output : Sum of numbers smaller than input
+    """ Input : A bound number
+    Output : Sum of numbers smaller than input """
     
     return int((bound*(bound+1))/2)
 
