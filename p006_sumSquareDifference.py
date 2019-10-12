@@ -3,8 +3,6 @@
 
 import time as t
 
-start = t.time()
-
 
 def sum_squares(bound):
     """ Input : A bound number
@@ -21,6 +19,8 @@ def sum_nums(bound):
 
 
 if __name__ == '__main__':
+    start = t.time()
+    
     limit = 100
     diff = sum_nums(limit)**2 - sum_squares(limit)
     print(diff)
