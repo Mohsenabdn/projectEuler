@@ -19,7 +19,7 @@ def product_adjacent(big_num, num_adj):
 if __name__ == '__main__:
     start = t.time()
     
-    file = open('1000DigitNumber.txt')
+    file = open('p008_1000DigitNumber.txt')
     bigNum = file.read()
     file.close()
     bigNum = bigNum.replace('\n', '')
