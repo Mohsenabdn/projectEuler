@@ -1,6 +1,6 @@
 # Finding sum of all primes below 2,000,000
 
-from p003_largestPrimeFactor import prime_finder
+from p005_smallestMultiple import prime_finder
 import numpy as np
 import time as t
 
