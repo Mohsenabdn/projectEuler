@@ -8,7 +8,7 @@ import time as t
 def product_adjacent(big_num, num_adj):
     """ Input : A large number of type string (big_num) and the number of
      adjacent digits (num_adj).
-     Output : A list of all products of num_adj adjacent digits. """
+    Output : A list of all products of num_adj adjacent digits. """
     
     prod_len = len(big_num)-num_adj+1
     digits = [int(i) for i in big_num]
