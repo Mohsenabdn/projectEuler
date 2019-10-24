@@ -5,8 +5,6 @@
 import numpy as np
 import time as t
 
-start = t.time()
-
 
 def all_direction_products(g, num_adj):
     # Input : A square grid and number of adjacent numbers
@@ -27,6 +25,8 @@ def all_direction_products(g, num_adj):
 
 
 if __name__ == '__main__':
+    start = t.time()
+    
     grid = np.genfromtxt('p011_20By20Grid.txt', dtype='int8')
     numAdj = 4
     rows, cols, mainDiags, opposDiags = all_direction_products(grid, numAdj)
