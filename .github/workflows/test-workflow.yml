@@ -1,0 +1,20 @@
+name: Test workflow
+
+on:
+    push:
+        branches:
+            - master
+    pull_request:
+        branches:
+            -master
+    workflow_dispatch:
+
+jobs:
+    test:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Check out repo code
+              uses: actions/checkout@v2
+
+            - name: Hello
+              run: echo "Hello!"
