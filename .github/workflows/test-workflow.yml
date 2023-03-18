@@ -37,7 +37,7 @@ jobs:
           echo "This is the value of VARIABLE: $VARIABLE"
 
       - name: Checking initializing variable with shell command
-        run: echo "WORKSPACE_FOLDER=$(basename $GITHUB_WORKSPACE)" >> GITHUB_ENV
+        run: echo "WORKSPACE_FOLDER=$(basename $GITHUB_WORKSPACE)" >> $GITHUB_ENV
       
       - name: Show variable
         run: echo "This is the folder = $WORKSPACE_FOLDER"
