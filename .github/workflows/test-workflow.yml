@@ -9,15 +9,19 @@ on:
     - master
   workflow_dispatch:
 
+env:
+  DAY_OF_WEEK: Monday
+
 jobs:
   test:
     runs-on: ubuntu-latest
+    env:
+      Greeting: Hello
     steps:
       - name: Check out repo code
         uses: actions/checkout@v2
 
       - name: Hello
-        run: echo "Hello!"
-
-      - name: goodbye
-        run: echo "goodbye"
+        run: echo "$Greeting $First_Name. Today is $DAY_OF_WEEK!"
+        env:
+          First_Name: Mona
