@@ -29,4 +29,9 @@ jobs:
       - name: Checking env variables
         run: |
           echo "workspace is $GITHUB_WORKSPACE"
-          echo "workspace is ${{ github.workspace }}"
+          echo "VARIABLE=test_${GITHUB_SHA}" >> $GITHUB_ENV
+      
+      - name: Checking variable
+        run: |
+          echo "This is the value of VARIABLE: ${{env.VARIABLE}}"
+          echo "This is the value of VARIABLE: $VARIABLE"
