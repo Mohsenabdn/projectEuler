@@ -25,3 +25,6 @@ jobs:
         run: echo "$Greeting $First_Name. Today is $DAY_OF_WEEK!"
         env:
           First_Name: Mona
+
+      - name: Checking env variables
+        run: echo "workspace is $GITHUB_WORKSPACE"
