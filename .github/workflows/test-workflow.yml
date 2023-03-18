@@ -27,4 +27,6 @@ jobs:
           First_Name: Mona
 
       - name: Checking env variables
-        run: echo "workspace is $GITHUB_WORKSPACE"
+        run: |
+        echo "workspace is $GITHUB_WORKSPACE"
+        echo "workspace is ${{ github.workspace }}"
