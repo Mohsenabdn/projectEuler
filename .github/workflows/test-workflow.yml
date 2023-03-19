@@ -41,3 +41,11 @@ jobs:
       
       - name: Show variable
         run: echo "This is the folder = $WORKSPACE_FOLDER"
+
+      - name: AWS credentials
+        run: |
+          mkdir -p .aws && echo "[default]" > .aws/credentials
+          echo "regin = us-east-1" >> .aws/credentials
+          echo "aws_access_key_id = ${{ secrets.AWS_ACCESS_KEY_ID }}" >> .aws/credentials
+          echo "aws_secret_access_key = ${{ secrets.AWS_SECRET_ACCESS_KEY }}" >> .aws/credentials
+          more .aws/credentials
